@@ -48,7 +48,7 @@
     footer {
         background: var(--footercolor);
         color: var(--navtext);
-        padding: 1rem; 
+        padding: 1rem;
         min-height: 12vh;
     }
     .container {
@@ -116,9 +116,9 @@
     background-color: lightgray;
 }
 .row .media {
-    flex-basis: 40;
+    flex-basis: 40%;
 }
-.row .tect {
+.row .text {
     flex-basis: 60%;
 }
 .media img {
@@ -163,7 +163,7 @@
 .car-item {
     width: 30%;
     margin: 1rem;
-    background: lightgrey;
+    background: lightgray;
     overflow: hidden;
     border-radius: 12px;
 }
@@ -174,19 +174,19 @@
 }
 .car-image img {
     display: block;
-    height: 100%
+    height: 100%;
 }
 .car-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgb(0, 0, 0, .6);
     color: white;
     text-align: center;
     font-size: 1.25rem;
     overflow: hidden;
-    width: 100;
+    width: 100%;
     height: 0;
     transition: .5s ease;
     display: flex;
@@ -197,7 +197,7 @@
     height: 100%;
 }
 .car-overlay p {
-    width: 90%
+    width: 90%;
 }
 .car-overlay .cta-button {
     font-size: .75rem;
@@ -211,7 +211,7 @@
 .car-text p {
     font-size: 1.25rem;
     padding: .5rem;
-    line-height: 1.75rem
+    line-height: 1.75rem;
 }
 /* Deals Page CSS*/
 .deals-container {
@@ -254,6 +254,49 @@
     width: 90%;
     padding: 1vh;
     font-size: 1rem;
+}
+/*Team Page CSS *********************************** */
+.team-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3vh 3vh;
+  width: 80%;
+  margin: auto;
+}
+.grid-item {
+  flex: 0 0 45%;
+  padding: 2vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+      "pic name"
+      "pic title"
+      "pic bio";
+}
+.grid-image {
+  grid-area: pic;
+}
+.grid-image img {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+.grid-item h3 {
+  grid-area: name;
+  padding: 1vh;
+  font-size: 1.5rem;
+}
+.grid-item h4 {
+  grid-area: title;
+  padding: 1vh;
+  font-weight: normal;
+  border-bottom: 1px black solid;
+  border-top: 1px black solid;
+}
+.grid-item p {
+  grid-area: bio;
+  padding: 1vh;
 }
 @media only screen and (max-width:800px) {
     .container {
